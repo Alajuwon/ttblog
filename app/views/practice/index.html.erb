@@ -1,0 +1,12 @@
+<h1>Choose</h1>
+
+
+<% if !@name.nil? %>
+	<h2>Welcome Back, <%= @name %></h2>
+<% end %>
+
+<% @colors.each do |color| %>
+	<p>
+		<%= link_to color, about_path(color: color) %>
+	</p>
+<% end %>
